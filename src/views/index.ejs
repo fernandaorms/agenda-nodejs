@@ -1,0 +1,59 @@
+<%- include('includes/header'); %>
+
+    <main class="mt-5 mb-5">
+        <section class='hero mt-3 mb-3'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-8 mx-auto text-center'>
+                        <div class='introduction'>
+                            <div class='title'>
+                                <h1>Agenda</h1>
+                            </div>
+
+                            <div class='content'>
+                                <p>Take a look at this small agenda project to save contacts</p>
+                            </div>
+                        </div>
+
+                        <%- include('includes/messages'); %>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <% const static_table = { first_name: 'Fernanda', last_name: 'Oliveira', email: 'fernandaoliveira.rms@gmail.com', phone: '123456789' } %>
+
+        <section class='contacts mt-3 mb-3'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-8 mx-auto'>
+                        <div class='responsive-table'>
+                            <table class='table'>
+                                <tr>
+                                    <td>First Name</td>
+                                    <td>Last Name</td>
+                                    <td>Email</td>
+                                    <td>Phone</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <% for( let i = 0; i < 4; i++ ) { %>
+                                    <tr>
+                                        <td><%= static_table.first_name %></td>
+                                        <td><%= static_table.last_name %></td>
+                                        <td><%= static_table.email %></td>
+                                        <td><%= static_table.phone %></td>
+                                        <td><a href='#'>Edit</a></td>
+                                        <td><a href='#' class='text-danger'>Delete</a></td>
+                                    </tr>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<%- include('includes/footer'); %>
