@@ -10,7 +10,7 @@ const path = require('path');
 const routes = require('./routes');
 const { globalMiddleware, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware');
 
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -63,8 +63,8 @@ app.use(csrfMiddleware);
 app.use(routes);
 
 app.on('ready', () => {
-    app.listen(PORT, () => {
-        console.log(`Access: http://localhost:${PORT}`);
-        console.log('Server running at port', PORT);
+    app.listen(port, () => {
+        console.log(`Access: http://localhost:${port}`);
+        console.log('Server running at port', port);
     });
 });
