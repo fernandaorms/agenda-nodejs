@@ -1,6 +1,6 @@
 # Agenda Project
 
-#### Welcome! [You can check the live project here](#)
+#### Welcome!
 
 This a simple project of an **Agenda** where the goal was having a **CRUD** of contacts. 
 After creating an account, the User can Login and access his contacts lists, being able to Create, Update and Delete a Contact.
